@@ -40,9 +40,9 @@ def set_registry_values(reg_file_path):
     """Устанавливает значения в реестре из загруженного файла .reg"""
     try:
         subprocess.run(['regedit', '/s', reg_file_path], check=True)
-        print(f"Registry imported successfully")
+        print(f"Успешно записано в реестр")
     except subprocess.CalledProcessError as e:
-        print(f"Error: {e}")
+        print(f"Ошибка: {e}")
 
 
 def find_steam_id(game_name):
